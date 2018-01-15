@@ -25,7 +25,7 @@ class Spinner extends React.Component {
     window.removeEventListener("deviceorientation", this.handleRotation.bind(this), true);
   }
   handleRotation(data){
-    let newRotation = data.gamma%360;
+    let newRotation = data.alpha%360;
     this.setState({rotation: newRotation, alpha: data.alpha, beta: data.beta, gamma: data.gamma, });
   }
   rotate(){

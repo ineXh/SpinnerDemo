@@ -1,7 +1,7 @@
 ~*.*
 *.tmp
 node_modules/*
-src/client/public/bundle.js
+public/dist/bundleDev.js
 *.log
 *.xlsx
 *.class
