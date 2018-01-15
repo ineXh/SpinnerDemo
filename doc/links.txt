@@ -1,0 +1,10 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation
+
+var handleOrientation = function(data){ console.log(data)}
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+https://codepen.io/anon/pen/YZrrWM
+
+http://www.material-ui.com/#/get-started/usage
+
+dynamic.js
