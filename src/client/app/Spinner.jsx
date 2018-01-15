@@ -9,6 +9,9 @@ class Spinner extends React.Component {
     super(props);
     this.state = {
     	rotation: 0,
+      alpha: 0,
+      beta: 0,
+      gamma: 0,
 
     };
 
@@ -23,7 +26,7 @@ class Spinner extends React.Component {
   }
   handleRotation(data){
     let newRotation = data.gamma%360;
-    this.setState({rotation: newRotation});
+    this.setState({rotation: newRotation, alpha: data.alpha, beta: data.beta, gamma: data.gamma, });
   }
   rotate(){
     //console.log('rotate')
@@ -34,12 +37,23 @@ class Spinner extends React.Component {
   render() {
     let rotation = 0
     return (
-      <img style={{transform: `rotate(${this.state.rotation}deg)`}}
-           src={"src/client/assets/0.png"}
-           width="256" height="256" />
+      <div>
+        <p>alpha: {this.state.alpha}</p>
+        <p>beta: {this.state.beta}</p>
+        <p>gamma: {this.state.gamma}</p>
+        <img style={{transform: `rotate(${this.state.rotation}deg)`,
+                margin: 'auto',
+                position: 'absolute',
+                bottom: '50%',
+                left: '50%',
+                marginTop: '-128px',
+                marginLeft: '-128px',
+              }}
+             src={"assets/0.png"}
+             width="256" height="256" />
+      </div>
     );
   } // end render
-
 } // end Spinner
 
 export default Spinner;
