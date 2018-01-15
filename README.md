@@ -3,4 +3,4 @@
 Spinner Demo
 
 # Link
-https://inexh.github.io/SpinnerDemo/index.html
+https://inexh.github.io/SpinnerDemo/public/index.html
